@@ -1,4 +1,4 @@
-ch =input()[0]
+ch =input().lower()[0]
 vowels = "aeiou"
 if ch in vowels[:]:
     print("Vowel")
