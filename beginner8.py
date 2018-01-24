@@ -1,4 +1,4 @@
-# print "Hello" N times
+
 n=int(input())
 if n>=0:
     sum=int((n*(n+1))/2)
