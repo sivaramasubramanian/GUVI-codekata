@@ -1,6 +1,8 @@
-ch =input()
+ch =input()[0]
 vowels = "aeiou"
 if ch in vowels[:]:
     print("Vowel")
-else:
+elif ch.isalpha():
     print("Consonant")
+else:
+    print("Not a Alphabet")
