@@ -46,4 +46,7 @@ def areIsomorphic(string1, string2):
 
 word1=input()
 word2=input()
-print(areIsomorphic(word1,word2))
+if areIsomorphic(word1,word2):
+    print("yes")
+else:
+    print("no")
