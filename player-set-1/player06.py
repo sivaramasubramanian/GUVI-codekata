@@ -1,5 +1,5 @@
 # Python program to check if two strings are isomorphic
-MAX_CHARS = 256
+MAX_CHARS = 100002
 
 # This function returns true if str1 and str2 are isomorphic
 def areIsomorphic(string1, string2):
