@@ -10,15 +10,11 @@ class RobotGame {
 		RobotGame currentGame = new RobotGame();
 		currentGame.getGridDetails();
 		currentGame.getRobotDetails();
-		System.out.println("The initial position of robot  is  "
-				+ currentGame.robot.currentPosition);
-		System.out.println("The Robot  is facing "
-				+ currentGame.robot.currentDirection);
+		System.out.println("The initial position of robot  is  "+ currentGame.robot.currentPosition);
+		System.out.println("The Robot  is facing "+ currentGame.robot.currentDirection);
 		currentGame.playGame();
-		System.out.println("The final position of robot  is  "
-				+ currentGame.robot.currentPosition);
-		System.out.println("The Robot  is facing "
-				+ currentGame.robot.currentDirection);
+		System.out.println("The final position of robot  is  "+ currentGame.robot.currentPosition);
+		System.out.println("The Robot  is facing "+ currentGame.robot.currentDirection);
 
 	}
 
@@ -54,20 +50,16 @@ class RobotGame {
 		// entered
 		while (initialX > grid.noOfColumns || initialY > grid.noOfColumns
 				|| initialX < 0 || initialY < 0) {
-			System.out
-					.println("The Position is out of the Grid. Please Enter a valid position inside the grid. ");
+			System.out.println("The Position is out of the Grid. Please Enter a valid position inside the grid. ");
 
-			System.out
-					.println("Enter the initial X axis position of the Robot: ");
+			System.out.println("Enter the initial X axis position of the Robot: ");
 			initialX = reader.nextInt();
-			System.out
-					.println("Enter the initial Y axis position of the Robot:");
+			System.out.println("Enter the initial Y axis position of the Robot:");
 			initialY = reader.nextInt();
 		}
 
 		// Get the Direction of the Robot
-		System.out
-				.println("Which direction is the Robot Currently facing? \n(N - North, E - East, W - West, S-South): ");
+		System.out.println("Which direction is the Robot Currently facing? \n(N - North, E - East, W - West, S-South): ");
 		char direction = reader.next().toLowerCase().charAt(0);
 
 		// If the Direction is not in N,E,W or S for North,East,West or South
@@ -75,8 +67,7 @@ class RobotGame {
 		// Prompt for a valid Direction
 		while (!("news".indexOf(direction) >= 0)) {
 			System.out.print("No Such Direction. Try again ");
-			System.out
-					.print("Enter one of the following: \nN - North, E - East, W - West, S-South ");
+			System.out.print("Enter one of the following: \nN - North, E - East, W - West, S-South ");
 			direction = reader.next().toLowerCase().charAt(0);
 		}
 
@@ -108,8 +99,7 @@ class RobotGame {
 	public void getCommand() {
 
 		// Get the command
-		System.out
-				.println("Give a command to the Robot (M - Move, R- Rotate) :");
+		System.out.println("Give a command to the Robot (M - Move, R- Rotate) :");
 		char command = reader.next().toLowerCase().charAt(0);
 		switch (command) {
 		case 'm':
@@ -133,8 +123,7 @@ class RobotGame {
 		// If the command is a ROTATE
 		case 'r':
 			// Get the direction to rotate to.
-			System.out
-					.print("Enter the direction to rotate the Robot: \n(N - North, E - East, W - West, S-South):");
+			System.out.print("Enter the direction to rotate the Robot: \n(N - North, E - East, W - West, S-South):");
 			char direction = reader.next().toLowerCase().charAt(0);
 			// Check if the direction is valid
 			if ("news".indexOf(direction) >= 0) {
